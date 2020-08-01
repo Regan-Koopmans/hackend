@@ -1,0 +1,15 @@
+start: (endpoint)*
+
+endpoint: verb route ">" string NEWLINE+
+get: "GET"
+post: "POST"
+verb: get | post
+route: string
+
+%import common.WORD   // imports from terminal library
+string : ESCAPED_STRING
+%import common.ESCAPED_STRING
+%import common.NEWLINE
+%ignore " "           // Disregard spaces in text
+
+

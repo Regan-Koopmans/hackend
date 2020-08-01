@@ -1,0 +1,2 @@
+GET "/" > "Hello world!"
+GET "/test" > "this is a test"
